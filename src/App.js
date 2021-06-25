@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { githubProvider } from './config/authMethod';
+import githubAuth from './service/auth';
 
 function App() {
+  const handleOnClick = async (provider) => {
+    const res = await githubAuth(provider)
+    console.log(res)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => handleOnClick(githubProvider)}>Github</button>
     </div>
   );
 }
