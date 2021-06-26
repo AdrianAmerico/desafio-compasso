@@ -17,4 +17,3 @@ export async function useGetUserGit(body) {
         })
     return [userData, getUsers];
 }
-
