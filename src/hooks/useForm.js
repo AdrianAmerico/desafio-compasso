@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const useForm = (initialState) => {
     const [body, setBody] = useState(initialState)
@@ -6,6 +6,7 @@ const useForm = (initialState) => {
     const onChange = (event) => {
         const { name, value } = event.target
         setBody({ ...body, [name]: value })
+        console.log(body)
     }
 
     const clear = () => {
