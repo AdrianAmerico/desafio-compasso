@@ -1,32 +1,30 @@
-import React, { useContext, useEffect } from 'react';
+import { Button } from '@material-ui/core';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { GlobalStateContext } from '../../global/GlobalContext';
-import { useGetUserRepos } from '../../requests/getUserRepos';
+import Loading from '../Loading/Loading';
 import './card.scss';
 
 function Card({ userData }) {
-const history = useHistory()
+    const history = useHistory()
     useEffect(() => {
     }, [userData])
 
-    const { requestUsers } = useGetUserRepos([])
-
-    console.log(userData)
     const { avatar_url, bio, followers, following, location, name, public_repos, login } = userData
-    console.log(avatar_url)
 
     const onClickRepos = () => {
-        console.log("hmm")
         history.push(`/${login}/repository`)
-        // requestUsers("AdrianAmerico")
+    }
+
+    const onClickStarred = () => {
+        history.push(`/${login}/starred`)
     }
 
     return userData.name ? (
-        <div id="CardContainer" >
-
+        <div id="CardContainer">
             <div>
                 <img src={avatar_url} alt="" />
-                <p>{name}</p>
+                <h3>{name}</h3>
+                <p>{bio}</p>
                 <p>{location}</p>
                 <div className="cardInfo">
                     <span>Repositórios</span>
@@ -42,11 +40,13 @@ const history = useHistory()
                     <span>Seguindo</span>
                     <span>{following}</span>
                 </div>
-                <button onClick={onClickRepos}>Perfil</button>
+                <section className="buttonsSection">
+                    <Button onClick={onClickRepos}>Repositório</Button>
+                    <Button onClick={onClickStarred}>Starred</Button>
+                </section>
             </div>
-
         </div>
-    ) : (<p>aaa</p>)
+    ) : (<Loading />)
 
 }
 

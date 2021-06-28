@@ -1,19 +1,17 @@
-import React, { useContext, useEffect } from 'react';
-import { GlobalStateContext } from '../../global/GlobalContext';
+import React, { useEffect } from 'react';
 import Card from '../Card/Card';
 import Header from '../Header/Header';
 import { useGetUserGit } from '../../requests/getUserGit';
 import { useParams } from 'react-router';
+import './maincontent.scss';
 
 function MainContent() {
     const { requestUsers, userData } = useGetUserGit({})
-    // const { userData } = useContext(GlobalStateContext)
     const params = useParams()
-    console.log(userData)
+
     useEffect(() => {
         requestUsers(params.user)
-    }, [])
-    console.log(userData)
+    }, [params.user])
     return (
         <>
             <Header />

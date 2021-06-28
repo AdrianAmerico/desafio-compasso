@@ -1,29 +1,30 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Loading from '../../components/Loading/Loading';
 import UserRepository from '../../components/UserRepository/UserRepository';
-import { GlobalStateContext } from '../../global/GlobalContext';
 import { useGetUserRepos } from '../../requests/getUserRepos';
+import ButtonArea from '../../components/ButtonArea/ButtonArea';
 
 function UserProfile() {
     const params = useParams()
     const { requestUsers, userRepos } = useGetUserRepos({})
-    const { userData } = useContext(GlobalStateContext)
-    console.log(userData)
-    // requestUsers(params.user)
+
     useEffect(() => {
         requestUsers(params.user)
     }, [])
 
     return (
         <div>
-            {userRepos.length > 0 ? (
-                userRepos.map((rep) => {
-                    console.log(rep)
-                    return (
-                        <UserRepository rep={rep} key={rep.id}/>
-                    )
-                })
-            ) : <p>Carregando</p>}
+            <div style={{ overflow: "auto" }}>
+                {userRepos.length > 0 ? (
+                    userRepos.map((rep) => {
+                        return (
+                            <UserRepository rep={rep} key={rep.id} />
+                        )
+                    })
+                ) : <Loading style={{ position: "relative" }} />}
+            </div>
+            <ButtonArea />
         </div>
     )
 }

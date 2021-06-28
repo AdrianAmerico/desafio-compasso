@@ -6,13 +6,11 @@ const useForm = (initialState) => {
     const onChange = (event) => {
         const { name, value } = event.target
         setBody({ ...body, [name]: value })
-        console.log(body)
     }
 
     const clear = () => {
         setBody(initialState)
     }
-    console.log(body)
     return { body, onChange, clear }
 }
 

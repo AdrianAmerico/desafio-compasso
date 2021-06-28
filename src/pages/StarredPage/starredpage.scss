@@ -1,0 +1,11 @@
+#StarredContainer {
+  max-width: 100vw;
+  min-height: 100vh;
+
+  .buttonSection {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+  }
+}

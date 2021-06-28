@@ -5,7 +5,6 @@ import './homepage.scss';
 
 function HomePage() {
     const { userData } = useContext(GlobalStateContext)
-    console.log(userData)
     useEffect(() => {
 
     }, [userData])
