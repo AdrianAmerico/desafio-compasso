@@ -33,14 +33,14 @@
 
 ### Página inicial
 
-*** Desktop
+**Desktop**
 
 ![Captura de tela de 2021-06-27 22-17-45](https://user-images.githubusercontent.com/73081422/123566227-8cf69000-d795-11eb-853e-471cb541d73e.png)
 
 
 ![Captura de tela de 2021-06-27 22-14-50](https://user-images.githubusercontent.com/73081422/123566143-5751a700-d795-11eb-8ef5-6fee66b6e17e.png)
 
-*** Mobile
+***Mobile**
 
 ![Captura de tela de 2021-06-27 22-17-53](https://user-images.githubusercontent.com/73081422/123566238-92ec7100-d795-11eb-9652-05ac92d653a0.png)
 
@@ -49,21 +49,21 @@
 
 ### Repositórios
 
-*** Desktop
+***Desktop**
 
 ![Captura de tela de 2021-06-27 22-18-49](https://user-images.githubusercontent.com/73081422/123566305-bfa08880-d795-11eb-9e51-988b42fdfaae.png)
 
-*** Mobile
+**Mobile**
 
 ![Captura de tela de 2021-06-27 22-18-58](https://user-images.githubusercontent.com/73081422/123566321-c7f8c380-d795-11eb-9edf-1fef61865b5c.png)
 
 ### Página de Favoritos
 
-*** Desktop
+**Desktop**
 
 ![Captura de tela de 2021-06-27 22-20-52](https://user-images.githubusercontent.com/73081422/123566378-f4acdb00-d795-11eb-85b1-94e219e68862.png)
 
-*** Mobile
+**Mobile**
 
 ![Captura de tela de 2021-06-27 22-20-42](https://user-images.githubusercontent.com/73081422/123566386-fa0a2580-d795-11eb-8b9a-9be84bacd61f.png)
 
