@@ -29,7 +29,7 @@
 * Como houve poucas páginas não criei uma lista de funções para mudar a página;
 
 ## Considerações finais 
-* Algumas das ideias infelizmente não foi implementada, como um botao para modo noturno utilizando um estado global, mas considernado que todo o desenvolvimento do site foi feito em um domingo inteiro fiquei feliz com o resultado, 
+* Algumas das ideias infelizmente não foi implementada, como um botao para modo noturno utilizando um estado global, mas considernado que todo o desenvolvimento do site foi feito em um domingo inteiro fiquei feliz com o resultado.
 
 ## Fotos
 
