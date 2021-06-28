@@ -1,5 +1,7 @@
 # Desafio Compasso
 
+# Surge: http://adrian-americo-compasso.surge.sh
+
 ## Considerações iniciais
 
 * Foi um desafio bem bacana e que levou mais tempo do que imaginei, a API me pareceu bem confusa mas graças as pessoas no grupo do slack consegui vencer os desafios. De inicio a ideia seria implementar um login com o github utilizando o firebase mas o retorno da requisição não vinha com a tag do perfil e sim o nome de usuario fazendo com que não fosse possivel usar essa resposta como parametro para as requisições no axios.
