@@ -1,11 +1,26 @@
-@import '../../global/color.scss';
+@import "../../global/color.scss";
 
 header {
-display: flex;
-height: 20vh;
-// background-color: #f2f3f5;
-background-color: red;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  align-items: center;
+  background-color: #aec5db;
 
+
+  .seachSection {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    h1 {
+    }
+    h3 {
+    }
+    .inputArea {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

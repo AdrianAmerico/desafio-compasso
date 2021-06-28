@@ -1,0 +1,53 @@
+article {
+  .repositoryInfo {
+    border-bottom: 1px solid #e1e4e8;
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+
+    .repositoryCard-leftSide {
+      width: 75%;
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: #0366d6;
+      }
+
+      p {
+        padding-right: 25px;
+        margin: 0;
+        margin-bottom: 8px;
+        color: #586069;
+        font-size: 14px;
+        word-break: break-word;
+      }
+
+      div {
+        padding: 0;
+        margin: 0;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          margin-right: 16px;
+          font-size: 12px;
+          color: #586069;
+        }
+      }
+    }
+    .repositoryCard-rightSide {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 25%;
+
+      button {
+        font-weight: 400;
+        font-size: 12px;
+        padding: 3px 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../global/color.scss";
+
+#CardContainer {
+  width: 250px;
+  padding: 5px;
+  display: inline-block;
+  background-color: rgb(235, 235, 240);
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    font-weight: 700;
+  }
+
+  .cardInfo {
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #666;
+
+    span {
+      margin: 0 5px;
+    }
+  }
+  .buttonsSection {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
