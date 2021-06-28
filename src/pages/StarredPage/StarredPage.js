@@ -7,6 +7,7 @@ import { useGetUserStarred } from '../../requests/getUserStarred';
 import './starredpage.scss';
 
 function StarredPage() {
+    document.title = "Favoritos";
     const params = useParams()
     const { requestStarred, userStarred } = useGetUserStarred()
     useEffect(() => {

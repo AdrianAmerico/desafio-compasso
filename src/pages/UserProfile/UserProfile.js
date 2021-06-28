@@ -6,6 +6,7 @@ import { useGetUserRepos } from '../../requests/getUserRepos';
 import ButtonArea from '../../components/ButtonArea/ButtonArea';
 
 function UserProfile() {
+    document.title = "Repositório";
     const params = useParams()
     const { requestUsers, userRepos } = useGetUserRepos({})
 

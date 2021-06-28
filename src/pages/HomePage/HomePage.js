@@ -4,6 +4,7 @@ import { GlobalStateContext } from '../../global/GlobalContext';
 import './homepage.scss';
 
 function HomePage() {
+    document.title = "Página Inicial";
     const { userData } = useContext(GlobalStateContext)
     useEffect(() => {
 
