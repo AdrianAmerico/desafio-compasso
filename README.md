@@ -16,8 +16,8 @@
 ## Problemas encontrados
 * Responsividade precisa melhorar
 * Uma das idéias seria um filtro de ordem (crescente e decrescente) onde irá formar um ranking dos repositórios mais vistos ou com mais favoritos porém o algoritmo percorria a resposta da requisição tornando o processo bastante pesado e demorado, ficando assim inviavel;
-* **POSSIVEL SOLUÇÃO
-*** Utilizar outro algoritmo para fazer o filtro ou extrair apenas as informações que serão utilizadas na aplicação, reduzindo assim o custo de processamento do mesmo
+* **POSSIVEL SOLUÇÃO**
+* Utilizar outro algoritmo para fazer o filtro ou extrair apenas as informações que serão utilizadas na aplicação, reduzindo assim o custo de processamento do mesmo
 * Página de carregamento poderia ser melhor, mas por questão de tempo acabei não fazendo;
 * Falta uma página de erro caso a URL do site sera inválida no Router;
 * Estilização e cores não há um padrao e não há uma tabela de cores pré determianda no SASS, prejudicando a manutenção;
