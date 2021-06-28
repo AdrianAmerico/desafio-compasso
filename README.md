@@ -42,7 +42,7 @@
 
 ![Captura de tela de 2021-06-27 22-14-50](https://user-images.githubusercontent.com/73081422/123566143-5751a700-d795-11eb-8ef5-6fee66b6e17e.png)
 
-***Mobile**
+**Mobile**
 
 ![Captura de tela de 2021-06-27 22-17-53](https://user-images.githubusercontent.com/73081422/123566238-92ec7100-d795-11eb-9652-05ac92d653a0.png)
 
@@ -51,7 +51,7 @@
 
 ### Repositórios
 
-***Desktop**
+**Desktop**
 
 ![Captura de tela de 2021-06-27 22-18-49](https://user-images.githubusercontent.com/73081422/123566305-bfa08880-d795-11eb-9e51-988b42fdfaae.png)
 
