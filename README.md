@@ -1,6 +1,6 @@
 # Desafio Compasso
 
-# Surge: http://adrian-americo-compasso.surge.sh
+# Surge: http://desafio-compassov2.surge.sh
 
 ## Considerações iniciais
 
@@ -29,26 +29,23 @@
 
 ### Página inicial
 
-**Desktop**
+![Captura de tela de 2021-09-14 22-26-26](https://user-images.githubusercontent.com/73081422/133355420-ff55b4bb-a596-45e4-b8e7-574cfac65401.png)
 
-**Mobile**
+![Captura de tela de 2021-09-14 22-26-45](https://user-images.githubusercontent.com/73081422/133355428-d86d92e4-af02-4cb6-afe0-6f22eb60df18.png)
 
+![Captura de tela de 2021-09-14 22-28-33](https://user-images.githubusercontent.com/73081422/133355475-58169ef0-0a39-4d87-9d61-d5c7ac8394d8.png)
 
 ### Repositórios
 
-**Desktop**
-
-**Mobile**
-
+![Captura de tela de 2021-09-14 22-28-55](https://user-images.githubusercontent.com/73081422/133355509-a779149d-3222-4162-b4b1-212b41122a36.png)
 
 ### Página de Favoritos
 
-**Desktop**
-
-**Mobile**
+![Captura de tela de 2021-09-14 22-29-25](https://user-images.githubusercontent.com/73081422/133355563-beb428b8-4a6c-4c59-a988-cf2b74969738.png)
 
 ### Card
 
+![Captura de tela de 2021-09-14 22-29-46](https://user-images.githubusercontent.com/73081422/133355596-0f62200a-c146-4a2d-a602-99dbb4bc5f33.png)
 
 
 
