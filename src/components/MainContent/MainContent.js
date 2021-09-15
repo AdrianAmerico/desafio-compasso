@@ -6,12 +6,14 @@ import { useParams } from 'react-router';
 import './maincontent.scss';
 
 function MainContent() {
-    const { requestUsers, userData } = useGetUserGit({})
+    const { requestUsers, userData } = useGetUserGit()
     const params = useParams()
-
+    const { user } = params
     useEffect(() => {
-        requestUsers(params.user)
-    }, [params.user])
+        if (user) {
+            requestUsers(user)
+        }
+    }, [user])
     return (
         <>
             <Header />

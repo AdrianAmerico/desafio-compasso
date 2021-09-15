@@ -1,23 +1,30 @@
 @import "../../global/color.scss";
 
+@mixin textFormat {
+  padding: 5px 0;
+}
+
 header {
   display: flex;
   flex-direction: column;
-  height: 20vh;
   align-items: center;
   background-color: #aec5db;
 
-
   .seachSection {
+    display: flex;
     width: 80%;
     margin: 0 auto;
-    align-items: center;
     text-align: center;
-    justify-content: center;
-    h1 {
-    }
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px 0;
+
+    h2,
     h3 {
+      @include textFormat();
     }
+
     .inputArea {
       display: flex;
       justify-content: center;

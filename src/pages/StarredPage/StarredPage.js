@@ -1,31 +1,42 @@
+import { Container } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { ButtonSection } from '../../common/ButtonSection';
 import ButtonArea from '../../components/ButtonArea/ButtonArea';
-import Loading from '../../components/Loading/Loading';
+import { ItemContainer } from '../../components/ItemContainer';
 import UserRepository from '../../components/UserRepository/UserRepository';
 import { useGetUserStarred } from '../../requests/getUserStarred';
-import './starredpage.scss';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 function StarredPage() {
     document.title = "Favoritos";
     const params = useParams()
     const { requestStarred, userStarred } = useGetUserStarred()
+    const { user } = params
     useEffect(() => {
-        requestStarred(params.user)
-    }, [])
+        requestStarred(user)
+    }, [user])
 
     return (
-        <div id="StarredContainer">
-            {userStarred && userStarred.length !== 0 ? (
-                userStarred.map((rep) => {
-                    return <UserRepository rep={rep} key={rep.id} />
-                })) : <Loading />}
-            <br />
-            <section className="buttonSection">
-                <ButtonArea />
-            </section>
-
-        </div>
+        <>
+            {
+                userStarred && userStarred?.length !== 0 ? (
+                    <Container>
+                        <ItemContainer>
+                            {userStarred.map((rep) => {
+                                return <UserRepository rep={rep} key={rep.id} />
+                            })}
+                        </ItemContainer>
+                        <br />
+                        <ButtonSection>
+                            <ButtonArea />
+                        </ButtonSection>
+                        <br />
+                    </Container>)
+                    : <LoadingPage />
+            }
+        </>
     )
 }
+
 export default StarredPage;

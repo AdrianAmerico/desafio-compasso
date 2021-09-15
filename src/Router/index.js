@@ -28,10 +28,6 @@ function Router() {
                     <Route exact path="/:user/starred">
                         <StarredPage />
                     </Route>
-                    <Route>
-                        <h1>Error</h1>
-                    </Route>
-
                 </Switch>
             </BrowserRouter>
         </GlobalStateContext.Provider>

@@ -20,14 +20,12 @@ function Header() {
     return (
         <header>
             <div className="seachSection">
-                <h1>Pesquisar Usuários do GitHub</h1>
+                <h2>Pesquisar Usuários do GitHub</h2>
                 <h3>Digite um nome para encontrar usuários e repositórios</h3>
-
                 <div className="inputArea">
                     <TextField placeholder="Pesquisar usuários" value={body.userName} name="userName" variant="outlined" label="Digite o nome do usuario" style={{ width: "80%" }} color="primary" onChange={onChange} required pattern={"^.{3,}"} min={3} />
                     <Button onClick={onClickSeach} variant="outlined" style={{ opacity: '0.5' }} type="button">Pesquisar</Button>
                 </div>
-
             </div>
         </header>
     )

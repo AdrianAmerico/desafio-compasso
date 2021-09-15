@@ -2,9 +2,9 @@ import { API, BASE_URL } from "../constants/constants";
 import { useState } from "react";
 import axios from "axios";
 
-export function useGetUserGit(initialState) {
+export function useGetUserGit() {
     const { CLIENT_ID, CLIENT_SECRET } = API;
-    const [userData, setUserData] = useState(initialState)
+    const [userData, setUserData] = useState([])
 
     function requestUsers(user) {
         axios.get(`${BASE_URL}/${user}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
@@ -12,7 +12,7 @@ export function useGetUserGit(initialState) {
                 setUserData(res.data)
             })
             .catch((err) => {
-                alert(err.response.data)
+                console.log(err)
             })
     }
     return { requestUsers, userData };
