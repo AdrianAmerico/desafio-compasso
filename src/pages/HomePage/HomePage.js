@@ -1,19 +1,11 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import Header from '../../components/Header/Header';
-import { GlobalStateContext } from '../../global/GlobalContext';
-import './homepage.scss';
 
 function HomePage() {
     document.title = "Página Inicial";
-    const { userData } = useContext(GlobalStateContext)
-    useEffect(() => {
-
-    }, [userData])
 
     return (
-        <div id="homepageContainer">
-            <Header />
-        </div>
+        <Header />
     )
 }
 export default HomePage;

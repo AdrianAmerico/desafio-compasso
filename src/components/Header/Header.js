@@ -3,7 +3,7 @@ import useForm from '../../hooks/useForm';
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
 import { GlobalStateContext } from '../../global/GlobalContext';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import './header.scss';
 
 function Header() {
@@ -11,21 +11,21 @@ function Header() {
     const history = useHistory()
     const { requestUsers } = useContext(GlobalStateContext)
     const onClickSeach = () => {
-        history.replace(body.userName)
-        requestUsers(body.userName);
+        if (body.userName.length > 3) {
+            history.replace(body.userName)
+            requestUsers(body.userName);
+        }
     }
 
     return (
         <header>
             <div className="seachSection">
-                <h1>Pesquisar Usuários do GitHub</h1>
+                <h2>Pesquisar Usuários do GitHub</h2>
                 <h3>Digite um nome para encontrar usuários e repositórios</h3>
-
                 <div className="inputArea">
-                    <TextField placeholder="Pesquisar usuários" value={body.userName} name="userName" variant="outlined" label="Digite o nome do usuario" style={{ width: "80%" }} color="primary" onChange={onChange} required pattern={"^.{3,}"} />
+                    <TextField placeholder="Pesquisar usuários" value={body.userName} name="userName" variant="outlined" label="Digite o nome do usuario" style={{ width: "80%" }} color="primary" onChange={onChange} required pattern={"^.{3,}"} min={3} />
                     <Button onClick={onClickSeach} variant="outlined" style={{ opacity: '0.5' }} type="button">Pesquisar</Button>
                 </div>
-
             </div>
         </header>
     )

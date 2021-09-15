@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  display: flex;
+  height: 50%;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  h2{
+    color: rgb(243, 7, 7)
+  }
+  h2,
+  h3 {
+    line-height: 1.5;
+    font-weight: bold;
+  }
+}

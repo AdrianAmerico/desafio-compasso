@@ -2,9 +2,9 @@ import { API, BASE_URL } from "../constants/constants";
 import { useState } from "react";
 import axios from "axios";
 
-export function useGetUserStarred (initialState) {
+export function useGetUserStarred() {
     const { CLIENT_ID, CLIENT_SECRET, count, sort } = API;
-    const [userStarred, setUserRepos] = useState(initialState)
+    const [userStarred, setUserRepos] = useState([])
 
     function requestStarred(user) {
         axios.get(`${BASE_URL}/${user}/starred?per_page=${count}&sort=${sort}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`)
@@ -12,7 +12,7 @@ export function useGetUserStarred (initialState) {
                 setUserRepos(res.data)
             })
             .catch((err) => {
-                alert(err.response.data)
+                console.log(err)
             })
     }
     return { requestStarred, userStarred };

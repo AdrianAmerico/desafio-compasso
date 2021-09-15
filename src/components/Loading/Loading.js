@@ -1,18 +1,15 @@
 import React from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import './loading.scss';
-import { useHistory } from 'react-router-dom';
-import { Button } from '@material-ui/core';
-
+import styles from './loading.module.scss';
+import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
 function Loading() {
-    const history = useHistory()
     return (
-        <div id="errorPage">
+        <div className={styles.root}>
             <div>
-                <h1>Este usuário não tem repositórios salvos</h1>
-                <CircularProgress />
-                <Button variant="contained" color="primary" onClick={() => history.push("/")}>Voltar</Button>
+                <h2>Usuário não encontrado</h2>
+                <h3>Verifique se o nome inserido é um usuário Github válido.</h3>
             </div>
+
+            <SentimentVeryDissatisfiedIcon style={{ fontSize: 100 }} />
         </div>
     )
 }

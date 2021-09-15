@@ -1,32 +1,44 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Loading from '../../components/Loading/Loading';
 import UserRepository from '../../components/UserRepository/UserRepository';
 import { useGetUserRepos } from '../../requests/getUserRepos';
 import ButtonArea from '../../components/ButtonArea/ButtonArea';
+import { ItemContainer } from '../../components/ItemContainer';
+import { ButtonSection } from '../../common/ButtonSection';
+import { Container } from '@material-ui/core';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 function UserProfile() {
     document.title = "Repositório";
+    const { requestUsers, userRepos } = useGetUserRepos()
     const params = useParams()
-    const { requestUsers, userRepos } = useGetUserRepos({})
+    const { user } = params
 
     useEffect(() => {
-        requestUsers(params.user)
-    }, [])
+        if (user) {
+            requestUsers(user)
+        }
+    }, [user])
 
     return (
-        <div>
-            <div style={{ overflow: "auto" }}>
-                {userRepos.length > 0 ? (
-                    userRepos.map((rep) => {
-                        return (
-                            <UserRepository rep={rep} key={rep.id} />
-                        )
-                    })
-                ) : <Loading style={{ position: "relative" }} />}
-            </div>
-            <ButtonArea />
-        </div>
+        <>
+            {userRepos && userRepos?.length !== 0 ? (
+                <Container>
+                    <ItemContainer>
+                        {userRepos.map((rep) => {
+                            return (
+                                <UserRepository rep={rep} key={rep.id} />)
+                        })}
+                    </ItemContainer>
+                    <br />
+                    <ButtonSection>
+                        <ButtonArea />
+                    </ButtonSection>
+                    <br />
+                </Container>)
+                : <LoadingPage />}
+        </>
     )
 }
+
 export default UserProfile;
